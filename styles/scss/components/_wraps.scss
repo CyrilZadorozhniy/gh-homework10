@@ -1,0 +1,20 @@
+.wrap {
+  &-content {
+
+  }
+  &-location {
+    width: 310px;
+    padding: 0 80px;
+  }
+  &-share {
+    width: 310px;
+    padding: 0 85px;
+    .link-facebook, .link-twitter, .link-linkedin {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+  }
+  &-about {
+    width: 310px;
+  }
+}

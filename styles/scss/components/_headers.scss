@@ -1,0 +1,40 @@
+.header {
+  &-site {
+    .container {
+      border-bottom: 1px solid #ffffff40;
+      padding: 50px 0;
+    }
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+    .wrap-logo {
+      margin-left: 15px;
+      max-width: 86px;
+      height: 25px;
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+      h1 {
+        position: absolute;
+        text-indent: -9999px;
+      }
+    }
+  }
+  &-scroll {
+    padding: 20px 0;
+    width: 100%;
+    background-color: #2B2E4A ;
+    position: fixed;
+    border: none;
+    transition: .2s;
+    .container {
+      border: none;
+      padding: 0;
+    }
+  }
+}

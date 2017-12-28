@@ -1,0 +1,19 @@
+.header-site {
+  .navbar-expand-md .navbar-collapse {
+    flex-basis: auto;
+  }
+  .bg-light {
+    padding: 0;
+    background-color: #f8f9fa00 !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.navbar-collapse {
+  flex-grow: 0!important;
+}
+.container {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}

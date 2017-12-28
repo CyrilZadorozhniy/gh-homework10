@@ -1,0 +1,131 @@
+.list {
+  &-features {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+
+      text-align: center;
+      max-width: 320px;
+      margin: 0 30px 30px;
+      $i: 1;
+      @each $feature in $features {
+        &:nth-child(#{$i}) {
+          $i: $i + 1;
+          &:before {
+            content: "";
+            background-image: url("../../img/#{$feature}");
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+          }
+        }
+      }
+    }
+    h3 {
+      color: #2d3033;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    p {
+      color: #6c7279;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  &-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    li {
+      overflow: hidden;
+      position: relative;
+      width: calc(100%/4) ;
+      max-width: calc(100%/4);
+      img {
+        width: 100%;
+        max-width: 100%;
+        transition: .3s;
+      }
+      &:hover img {
+        transform: scale(1.3);
+      }
+    }
+    &-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(232, 69, 69, 0.88);
+      top:0;
+      left:0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: .2s;
+      &:hover {
+        opacity: 1;
+      }
+      &:hover h3{
+        margin-bottom: 10px;
+      }
+      &:hover p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 20px;
+        transition: .2s;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: #ffffff;
+        margin-top: 20px;
+        transition: .2s;
+      }
+    }
+  }
+  &-team {
+    font-family: $raleway;
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 270px;
+      max-width: 270px;
+    }
+    .wrap-img {
+      width: 270px;
+      max-width: 270px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      img{
+        max-width: 100%;
+      }
+    }
+    h3 {
+      font-size: 22px;
+      color: #2d3033;
+      margin-bottom: 15px;
+    }
+    span {
+      text-transform: uppercase;
+      color: #e84545;
+      font-size: 13px;
+      display: block;
+      margin-bottom: 30px;
+    }
+    p {
+      color: #6c7279;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 50px;
+    }
+  }
+}
